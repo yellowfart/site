@@ -1,0 +1,54 @@
+.body {
+    display: flex;
+    height: 80vh;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.fart {
+    margin-bottom: 20%;
+    position: relative;
+    overflow: hidden;
+    cursor: none;
+}
+.fart:after {
+    content: "";
+    position: absolute;
+    top: -110%;
+    left: -210%;
+    width: 200%;
+    height: 200%;
+    opacity: 0;
+    transform: rotate(30deg);
+
+    /*background: rgba(255, 255, 255, 0.13);*/
+    background: linear-gradient(
+            to right,
+            rgba(255, 255, 255, 0.13) 0%,
+            rgba(255, 255, 255, 0.13) 77%,
+            rgba(255, 255, 255, 0.5) 78%,
+            rgba(255, 255, 255, 0.0) 100%
+    );
+}
+
+.fart:hover {
+    transform: scale(1.2);
+    transition: transform 0.3s ease-in-out;
+
+}
+
+
+.fart:hover:after {
+    opacity: 1;
+    top: -100%;
+    left: -101%;
+    transition-property: left, top, opacity;
+    transition-duration: 0.3s, 0.7s, 0.15s;
+    transition-timing-function: ease;
+}
+
+.fart:active:after {
+    opacity: 0;
+}
