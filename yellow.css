@@ -9,9 +9,21 @@
 
 .fart {
     margin-bottom: 5%;
+    height: 150px;
     position: relative;
     overflow: hidden;
     cursor: none;
+}
+
+@media only screen and (min-width: 576px) {
+    .fart {
+        height: 230px;
+    }
+}
+@media only screen and (min-width: 1024px) {
+    .fart {
+        height: 150px;
+    }
 }
 .fart:after {
     content: "";
